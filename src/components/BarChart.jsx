@@ -28,16 +28,34 @@ const BarChart = () => {
 
     useEffect(() => {
         setData({
-            labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
-            datasets: [
-                {
-                    label: 'Sales $',
-                    data: [32012, 24390, 22311, 34200, 22860, 21971, 19233],
-                    borderColor: ['black'],
-                    backgroundColor: ['blue']
-                }
-            ]
-        })
+					labels: ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"],
+					datasets: [
+						{
+							label: "Sales $",
+							data: [32012, 24390, 22311, 34200, 22860, 21971, 19233],
+							borderColor: ["black"],
+							backgroundColor: ["blue"],
+						},
+						{
+							label: "Recoveries from Apprehensions $",
+							data: [1200, 700, 548, 1100, 150, 284, 719],
+							borderColor: ["black"],
+							backgroundColor: ["green"],
+						},
+						{
+							label: "Returns $",
+							data: [929, 1891, 1430, 3120, 1720, 2108, 2831],
+							borderColor: ["black"],
+							backgroundColor: ["orange"],
+						},
+						{
+							label: "Shoplift loss $",
+							data: [310, 239, 732, 801, 526, 731, 438],
+							borderColor: ["black"],
+							backgroundColor: ["red"],
+						},
+					],
+				});
         setOptions({
             plugins: {
                 legend: {
@@ -45,7 +63,7 @@ const BarChart = () => {
                 },
                 title: {
                     display: true,
-                    text: 'Daily Goal'
+                    text: 'Weekly Progress'
                 }
             },
             maintainAspectRation: false,
